@@ -1,0 +1,22 @@
+here<!DOCTYPE html>
+<html>
+<head>
+  <title>Nova Studio Free</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background:#111;color:#fff;font-family:sans-serif;text-align:center;padding:20px}input{width:90%;padding:12px;border-radius:8px;border:none}button{margin-top:10px;padding:12px 20px;background:#4CAF50;color:#fff;border:none;border-radius:8px;font-size:16px}img{width:90%;margin-top:20px;border-radius:10px}</style>
+</head>
+<body>
+  <h1>🎨 Nova Studio Free</h1>
+  <input id="prompt" placeholder="Prompt लिखो: cute cat in space">
+  <br><button onclick="gen()">Generate Image</button>
+  <br><img id="img">
+  
+<script>
+function gen(){
+  let p = document.getElementById('prompt').value
+  if(!p) return alert("पहले Prompt लिखो भाई")
+  document.getElementById('img').src = "https://image.pollinations.ai/prompt/" + encodeURIComponent(p) + "?width=1024&seed=" + Math.random()
+}
+</script>
+</body>
+</html>
